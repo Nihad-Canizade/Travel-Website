@@ -1,44 +1,63 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container {
-  max-width: 1250px;
+  max-width: 1300px;
   margin: auto;
   padding: 0px 32px;
 }
 
 .navbar {
-  position: absolute;
   width: 100%;
+  position: absolute;
 }
+
 .navbar nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 30px 0px;
 }
+
 .navbar nav img {
   width: 150px;
 }
+
 .navbar nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
+
 .navbar nav ul li {
   padding: 0px 15px;
   list-style: none;
 }
+
 .navbar nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: 500;
   position: relative;
 }
+
 .navbar nav ul li a::after {
   content: "";
   position: absolute;
@@ -47,16 +66,20 @@
   width: 0;
   bottom: -5px;
   left: 0;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
+
 .navbar nav ul li a:hover::after {
   width: 100%;
 }
+
 .navbar nav ul .menu-icon {
   display: none;
   margin-left: 1rem;
   cursor: pointer;
 }
+
 .navbar nav ul .bar1,
 .navbar nav ul .bar2,
 .navbar nav ul .bar3 {
@@ -64,15 +87,21 @@
   height: 3px;
   background-color: white;
   margin: 5px 0;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
+
 .navbar nav ul .change .bar1 {
+  -webkit-transform: translate(0, 11px) rotate(-45deg);
   transform: translate(0, 11px) rotate(-45deg);
 }
+
 .navbar nav ul .change .bar2 {
   opacity: 0;
 }
+
 .navbar nav ul .change .bar3 {
+  -webkit-transform: translate(0, -6px) rotate(45deg);
   transform: translate(0, -6px) rotate(45deg);
 }
 
@@ -80,22 +109,35 @@
   width: 100%;
   min-height: 100vh;
   padding: 250px 0px 50px 0px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(/assets/images/s1-bgimg.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assets/images/s1-bgimg.jpg);
   background-size: cover;
   background-position: center;
 }
+
 .section1 .sec1-in {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
+
 .section1 .sec1-in .sec1-p1 {
   font-size: 11px;
   color: white;
   letter-spacing: 3px;
   position: relative;
 }
+
 .section1 .sec1-in .sec1-p1::after {
   content: "";
   position: absolute;
@@ -105,12 +147,14 @@
   bottom: 1.5rem;
   background-color: white;
 }
+
 .section1 .sec1-in .sec1-p2 {
   color: white;
   font-size: 52px;
   max-width: 400px;
   position: relative;
 }
+
 .section1 .sec1-in .sec1-p2::after {
   content: "";
   position: absolute;
@@ -120,6 +164,7 @@
   top: 9rem;
   background-color: white;
 }
+
 .section1 .sec1-in .sec1-btn {
   margin-top: 10rem;
   font-size: 15px;
@@ -128,35 +173,56 @@
   color: white;
   border: 1px solid white;
 }
+
 .section1 .sec1-in .sec1-btn:hover {
   cursor: pointer;
   border: 1px solid #fcb900;
   background-color: #fcb900;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .section2 {
   width: 100%;
   padding: 100px 0px;
 }
+
 .section2 .sec2-in .sec2-boxs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
 }
+
 .section2 .sec2-in .sec2-boxs .sec2-box {
   width: 21%;
   min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
+
 .section2 .sec2-in .sec2-boxs .sec2-box img {
   height: 64px;
   margin: 0px 0px 20px;
 }
+
 .section2 .sec2-in .sec2-boxs .sec2-box .sec2-box-p1 {
   color: #222222;
   font-size: 26px;
@@ -165,6 +231,7 @@
   line-height: 1.1;
   text-align: center;
 }
+
 .section2 .sec2-in .sec2-boxs .sec2-box .sec2-box-p2 {
   color: #666666;
   font-size: 15px;
@@ -175,32 +242,53 @@
   width: 100%;
   padding: 100px 0px;
 }
+
 .section3 .sec3-in .sec3-boxs {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
+
 .section3 .sec3-in .sec3-boxs .sec3-box {
   background-color: #efefef;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
 }
+
 .section3 .sec3-in .sec3-boxs .sec3-box img {
   width: 50%;
 }
+
 .section3 .sec3-in .sec3-boxs .sec3-box .sec3-box-fortext {
   padding: 15px 40px;
 }
+
 .section3 .sec3-in .sec3-boxs .sec3-box .sec3-box-fortext .sec3-box-p1 {
   color: #222222;
   font-size: 32px;
   margin: 0px 0px 9.5px;
   line-height: 1.3;
 }
+
 .section3 .sec3-in .sec3-boxs .sec3-box .sec3-box-fortext .sec3-box-p2 {
   color: #666666;
   font-size: 15px;
@@ -209,50 +297,111 @@
   line-height: 1.8;
 }
 
+.section4 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 0px;
+  background-color: red;
+}
+
+.section4 .sec4-in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.section4 .sec4-in .sec4-boxs {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.section4 .sec4-in .sec4-boxs .sec4-box {
+  width: 22%;
+}
+
+.section4 .sec4-in .sec4-boxs .sec4-box img {
+  width: 100%;
+  height: 10px;
+}
+
 @media screen and (max-width: 768px) {
   .navbar nav ul li {
     display: none;
   }
+
   .navbar nav ul .menu-icon {
     display: block;
   }
+
   .section2 .sec2-in .sec2-boxs {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
+
   .section2 .sec2-in .sec2-boxs .sec2-box {
     width: 48%;
   }
+
   .section3 .sec3-in .sec3-boxs {
     gap: 20px;
   }
+
   .section3 .sec3-in .sec3-boxs .sec3-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
+
   .section3 .sec3-in .sec3-boxs .sec3-box img {
     width: 100%;
     padding: 0px 40px;
   }
 }
+
 @media screen and (max-width: 468px) {
   .section1 .sec1-in .sec1-p2 {
     font-size: 30px;
     text-align: center;
   }
+
   .section1 .sec1-in .sec1-p2:after {
     top: 6rem;
   }
+
   .section2 .sec2-in .sec2-boxs .sec2-box {
     width: 90%;
   }
 }
+
 @media screen and (max-width: 350px) {
   .section1 .sec1-in .sec1-btn {
     padding: 15px 30px;
   }
+
   .section3 .sec3-in .sec3-boxs .sec3-box .sec3-box-fortext .sec3-box-p1 {
     font-size: 25px;
   }
+
   .section3 .sec3-in .sec3-boxs .sec3-box .sec3-box-fortext .sec3-box-p2 {
     font-size: 13px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
