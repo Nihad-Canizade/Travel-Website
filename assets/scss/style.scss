@@ -472,8 +472,8 @@
 // Section 7
 .section7 {
     width: 100%;
-    min-height: 100vh;
     padding: 100px 0px;
+    background-color: #f2f2f2;
 
     .sec7-in {
         width: 100%;
@@ -506,11 +506,17 @@
 
             .sec7-btn {
                 color: #222222;
-                background-color: #FBCE00;
+                background-color: #fcb900;
                 font-size: 15px;
                 font-weight: 400;
                 padding: 7px 25px;
-                border: 1px solid #FBCE00;
+                border: 1px solid #fcb900;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #FBCE00;
+                    transition: .3s;
+                }
             }
         }
 
@@ -525,10 +531,13 @@
                 width: 31%;
                 height: 350px;
                 padding: 0px 0px 10px 0px;
-                background-color: #e4e4e4;
+                background-color: white;
                 position: relative;
 
                 &:hover {
+                    box-shadow: 0px 0px 10px black;
+                    transition: .3s;
+
                     .s7-gif {
                         opacity: 1;
                     }
@@ -571,6 +580,125 @@
                     }
                 }
             }
+        }
+    }
+}
+
+
+// Footer
+.footer {
+    width: 100%;
+    padding: 100px 0px 30px 0px;
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .foot {
+
+            p {
+                color: #222222;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 1.1;
+                margin: 0px 0px 15px;
+            }
+
+            ul {
+                li {
+                    list-style: none;
+                    padding: 3px 0px;
+
+                    a {
+                        color: #222222;
+                        text-decoration: none;
+                        font-size: 15px;
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: #FBCE00;
+                            width: 0;
+                            height: 1px;
+                            left: 0;
+                            bottom: -2px;
+                            transition: .3s;
+                        }
+
+                        &:hover::after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Footer end
+    .footer-end {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 4rem;
+
+        p {
+            color: #666666;
+            font-weight: 500;
+            text-align: center;
+
+            span {
+                &:hover {
+                    cursor: pointer;
+                    color: #4484ce;
+                    transition: .2s;
+                }
+            }
+        }
+
+        .f-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            i {
+                cursor: pointer;
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+
+// Buy Kalium
+.buy-btn {
+    position: fixed;
+    left: 0;
+    bottom: 10px;
+    color: white;
+    background-color: #111111;
+    font-weight: 500;
+    border: none;
+    margin: 0px 0px 30px 30px;
+    padding: 16px 20px;
+    border-radius: 25px;
+    line-height: 1;
+
+    i {
+        font-size: 17px;
+        color: rgb(202, 248, 128);
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: #00b19e;
+        transition: .3s;
+
+        i {
+            color: white;
         }
     }
 }
@@ -635,14 +763,27 @@
             }
         }
     }
-    .section7{
-        .sec7-in{
-            .sec7-boxs{
+
+    .section7 {
+        .sec7-in {
+            .sec7-boxs {
                 flex-wrap: wrap;
                 gap: 20px;
-                .sec7-box{
+
+                .sec7-box {
                     width: 48%;
                 }
+            }
+        }
+    }
+
+    .footer {
+        footer {
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .foot {
+                width: 31%;
             }
         }
     }
@@ -670,15 +811,17 @@
             }
         }
     }
-    .section7{
-        .sec7-in{
-            .sec7-fortext{
+
+    .section7 {
+        .sec7-in {
+            .sec7-fortext {
                 align-items: flex-start;
                 flex-direction: column;
                 gap: 20px;
             }
-            .sec7-boxs{   
-                .sec7-box{
+
+            .sec7-boxs {
+                .sec7-box {
                     width: 90%;
                 }
             }
@@ -733,6 +876,21 @@
                     width: 100%;
                 }
             }
+        }
+    }
+
+    .footer {
+        footer {
+            gap: 40px;
+
+            .foot {
+                width: 48%;
+            }
+        }
+
+        .footer-end {
+            flex-direction: column;
+            gap: 20px;
         }
     }
 }
